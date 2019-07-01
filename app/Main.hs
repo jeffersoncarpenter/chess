@@ -4,7 +4,7 @@ module Main where
 
 import qualified Chess as CH
 import Chess (PieceType(..), Color(..))
-import Chess.PGN
+import Chess.FEN
 import Control.Monad
 import Data.List
 import Data.Maybe
@@ -438,7 +438,7 @@ verify_move c ps m =
 makeMove :: IO ()
 makeMove = do
   fen_str <- getLine
-  let fen = readPGN fen_str
+  let fen = readFEN fen_str
   case fen of
     Just gs -> do
       let Chess c ps = fromCH gs
