@@ -8,7 +8,6 @@ import Chess.PGN
 import Control.Monad
 import Data.List
 import Data.Maybe
-import Lib
 
 type Square = (Int, Int)
 
